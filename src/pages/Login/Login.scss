@@ -1,0 +1,18 @@
+@use '../../scss/' as *;
+
+.form-container {
+    margin-top: 10%;
+    h2 {
+        margin-bottom: 30px;
+    }
+    padding: 50px;
+    &__main {
+        width: 550px;
+        margin: auto;
+        padding: 25px;
+        // background-color: $third-bg;
+    }
+    .register:hover > * {
+        color: $txt-white;
+    }
+}

@@ -1,0 +1,180 @@
+@use '../../scss/' as *;
+
+.checkouts {
+    @include flex(flex-start, center);
+
+    &__left {
+        position: sticky;
+        top: calc(#{$header-shrink-height} + 20px);
+        width: 55%;
+        padding: 0 5%;
+
+        &__name {
+            font-size: 3rem;
+            font-weight: 400;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        &__items {
+            margin-bottom: 20px;
+
+            &__title {
+                font-size: 1.3rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            &__form {
+                
+                input {
+                    padding: 15px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 1px solid $txt-main-color;
+                    margin: 5px;
+                    width: 100%;
+                    font-size: 1.25rem;
+                }
+
+                span {
+                    margin: 8px;
+                    font-size: 1.1rem;
+                    color: red;
+                }
+            }
+
+            &__ship {
+                @include flex(center, space-between);
+
+                font-size: 1.25rem;
+                padding: 15px;
+                border: 1px solid $txt-main-color;
+                border-radius: 5px;
+
+                & > div > input {
+                    margin-right: 5px;
+                }
+            }
+
+            &__checkout {
+                border: 1px solid $txt-main-color;
+                font-size: 1.25rem;
+
+                &__top {
+                    padding: 20px;
+                    border-bottom: 1px solid $txt-main-color;
+
+                    input {
+                        margin-right: 5px;
+                    }
+                }
+
+                &__bot {
+                    text-align: center;
+                    padding: 20px 15px;
+                    background-color: #fafafa;
+                }
+            }
+
+            &__btn {
+                @include flex(center, space-between);
+            }
+        }
+    }
+
+    &__right {
+        flex: 1;
+        padding: 0 5%;
+        border-left: 1px solid $txt-second-color;
+        
+
+    }
+}
+
+.checkouts__item {
+    @include flex(flex-start, space-between);
+    margin-bottom: 20px;
+
+    &__info {
+        @include flex(flex-start, flex-start);
+
+        &__text {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            font-size: 1.25rem;
+        }
+
+        &__img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 1.25rem;
+    }
+}
+
+.checkouts__right__voucher {
+    @include flex(center, space-between);
+
+    height: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+
+
+    input {
+        flex: 1;
+        margin-right: 10px;
+        height: 100%;
+        outline: none;
+        padding: 0 10px;
+    }
+
+    button {
+        margin-top: unset;
+        height: 100%;
+    }
+}
+
+.checkouts__right__count {
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+
+    div {
+        @include flex(center,space-between);
+        margin: 5px 0;
+
+        span {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.checkouts__right__total {
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    @include flex(center,space-between);
+
+
+    & span:nth-child(1) {
+        font-size: 1.25rem;
+    }
+
+    & span:nth-child(2) {
+        font-size: 1.8rem;
+    }
+
+}

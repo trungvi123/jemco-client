@@ -1,0 +1,34 @@
+@use '../../scss/' as *;
+
+.footer {
+    padding: 70px 0;
+    box-shadow: $box-shadow;
+    font-size: 1.1rem;
+
+    .grid {
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        height: 38px;
+    }
+
+    &__logo__box {
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+}

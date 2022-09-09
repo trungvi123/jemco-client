@@ -1,0 +1,56 @@
+@use '../../scss/' as *;
+
+.table {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+
+    &-title,
+    &-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        
+        td,
+        th {
+            flex: 1;
+        }
+
+        td {
+            border-bottom: unset;
+        }
+    }
+
+    &-item {
+        border-bottom: 1px solid;
+
+        &__img {
+            width: 150px;
+            height: 150px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__color {
+            @include flex(center, center);
+
+            p {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 1px solid $txt-main-color;
+            }
+        }
+
+        &__handle {
+            @include flex(center, center);
+            flex-direction: column;
+        }
+    }
+}

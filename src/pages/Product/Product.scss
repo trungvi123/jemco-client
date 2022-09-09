@@ -1,0 +1,198 @@
+@use '../../scss/' as *;
+// Product page + product view components
+
+.product {
+    @include flex(flex-start, flex-start);
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__img {
+        @include flex(flex-start, flex-start);
+
+        width: 60%;
+        flex-wrap: wrap;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__list {
+            width: 20%;
+
+            &__item {
+                cursor: pointer;
+            }
+        }
+
+        &__main {
+            flex-grow: 1;
+            padding-top: 100%;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                height: 100%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+        top: $header-shrink-height;
+        position: sticky;
+        padding-top: 2rem;
+        padding-left: 2rem;
+
+        @include mobile {
+            position: relative;
+            top: unset;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            font-weight: normal;
+        }
+
+        &__item {
+            margin-top: 2rem;
+
+            &__price {
+                color: $main-color;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            &__title {
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            &__list {
+                @include flex(center, flex-start);
+
+                &__item {
+                    @include flex(center, center);
+
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid $txt-second-color;
+                    cursor: pointer;
+                    margin-right: 1rem;
+
+                    @include tablet {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &:hover,
+                    &.active {
+                        border-color: $main-color;
+                    }
+
+                    .circle {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+
+                        @include mobile {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    &__size {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            &__quantity {
+                @include flex(flex-start, flex-start);
+                font-size: 1.5rem;
+
+                &__btn {
+                    @include flex(center, center);
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid $txt-second-color;
+                    cursor: pointer;
+                }
+
+                &__input {
+                    @include flex(center, center);
+                    width: 90px;
+                    height: 30px;
+                    border-top: 2px solid $txt-second-color;
+                    border-bottom: 2px solid $txt-second-color;
+                }
+            }
+        }
+
+        &__btn {
+            @include flex(center, flex-start);
+
+            margin-top: 2rem;
+
+            button {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.product-desription {
+    width: 100%;
+    padding: 2rem 2rem 3rem;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    &.mobile {
+        display: none;
+        padding: unset;
+        margin-top: 20px;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+
+    @include mobile {
+        display: none;
+    }
+
+    &.descriptionExpand {
+        height: max-content;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem 0;
+    }
+
+    &__content {
+        font-size: 1.25rem;
+        line-height: 1.8rem;
+        text-align: justify;
+    }
+
+    &__toggle {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,56 @@
+@use '../../scss/' as *;
+
+.small_btn {
+    height: 2rem !important;
+    width: 10rem !important;
+    border-width: 2px !important;
+    padding: 0.25rem 1.5rem !important;
+    font-size: 1rem !important;
+}
+
+.btn {
+    @include flex(center, center);
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #4267b2;
+    opacity: 0.9;
+
+    &__icon {
+        display: none;
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        opacity: 1;
+        color: $txt-white;
+    }
+
+    &:hover &__content {
+        display: none;
+    }
+
+    &:hover &__icon {
+        display: block;
+    }
+}
+
+.no_icon {
+    &:hover .btn__content {
+        display: flex !important;
+    }
+}
+
+.primary_btn,.fullWidth_btn {
+    height: 3.2rem;
+    width: 12rem;
+    color: $btn-main-color;
+    border-radius: $boder-radius;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.fullWidth_btn {
+    width: 100%;
+}

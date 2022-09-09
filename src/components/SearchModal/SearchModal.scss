@@ -1,0 +1,97 @@
+@use '../../scss/' as *;
+
+.search-modal {
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    top: $header-height;
+    left: 0;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__content {
+        margin: auto;
+        z-index: 9999;
+        padding: 3rem 6rem;
+        background-color: $main-bg;
+        width: 80%;
+        position: relative;
+        transform: translateY(-250px);
+        transition: transform 0.3s ease;
+        opacity: 0;
+        box-shadow: $box-shadow;
+
+        @include tablet {
+            width: 85%;
+            padding: 1rem 2rem;
+        }
+
+        @include mobile {
+            width: 90%;
+            padding: 1rem 2rem;
+        }
+
+        &__search {
+            @include flex(center, center);
+            height: 50px;
+
+            button {
+                border-radius: 0;
+            }
+
+            input {
+                height: 100%;
+                outline: none;
+                flex: 1;
+                padding: 10px;
+                font-size: 1.5rem;
+
+                @include mobile {
+                    height: 70%;
+                }
+            }
+
+            a {
+                margin-top: unset;
+                height: 100%;
+                width: 170px;
+
+                &:hover {
+                    color: $txt-white;
+                }
+
+                @include mobile {
+                    height: 70%;
+                    margin-left: 5px;
+                    width: 100px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &__popular {
+            max-width: 400px;
+
+            h2 {
+                margin: 10px 0;
+            }
+
+            span {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &.active &__content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

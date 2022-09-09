@@ -1,0 +1,127 @@
+@use '../../scss/' as *;
+
+.hero-slider {
+    height: 100vh;
+    max-height: 1080px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+
+    &__item {
+        @include flex(center, space-between);
+
+        &__info {
+            width: 58.33%;
+
+            @include tablet {
+                width: 40%;
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+            &__title,
+            &__description {
+                margin-bottom: 60px;
+
+                @include tablet {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__title {
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-weight: 600;
+                font-size: 4.5rem;
+                line-height: 6.75rem;
+                overflow: hidden;
+
+                @include tablet {
+                    font-size: 3.2rem;
+                    line-height: 4.75rem;
+                }
+            }
+
+            &__description {
+                color: $txt-second-color;
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+                overflow: hidden;
+
+                @include tablet {
+                    font-size: 1.2rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+
+        &__img {
+            flex-grow: 1;
+            position: relative;
+            height: 100%;
+            pointer-events: none;
+
+            @include mobile {
+                @include flex(center, center);
+            }
+
+            @include tablet {
+                @include flex(center, center);
+            }
+
+            & img {
+                height: 80vh;
+                position: relative;
+                z-index: 99;
+
+                @include tablet {
+                    height: 70vh;
+                }
+            }
+
+            .shape {
+                $size: 400px;
+                height: $size;
+                width: $size;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                border-radius: 40% 60% 73% 27% / 43% 27% 73% 57%;
+                transform: translate(0, -50%);
+                transition: boder-radius 13s ease;
+                animation: boder 10s infinite;
+
+                @include tablet {
+                    height: 60%;
+                    width: 60%;
+                    left: 20%;
+                }
+
+                @include mobile {
+                    height: 60%;
+                    width: 60%;
+                    left: 20%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes boder {
+    0% {
+        border-radius: 40% 60% 73% 27% / 43% 27% 73% 57%;
+    }
+    50% {
+        border-radius: 79% 21% 32% 68% / 36% 57% 43% 64%;
+    }
+    100% {
+        border-radius: 40% 60% 73% 27% / 43% 27% 73% 57%;
+    }
+}
+
+.swiper-pagination {
+    @include mobile {
+        transform: translateY(10px);
+    }
+}

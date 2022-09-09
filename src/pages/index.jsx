@@ -1,0 +1,15 @@
+export { default as Home } from './Home';
+export { default as Cart } from './Cart';
+export { default as Catalog } from './Catalog';
+export { default as Product } from './Product';
+export { default as Checkouts } from './Checkouts';
+export { default as Search } from './Search';
+export { default as AddProduct } from './AddProduct';
+export { default as Admin } from './Admin';
+export { default as ProductManagement } from './ProductManagement';
+export { default as Login } from './Login';
+export { default as ReturnGoods } from './ReturnGoods';
+export { default as ReturnMoney } from './ReturnMoney';
+export { default as Insurance } from './Insurance';
+export { default as Contact } from './Contact';
+export { default as About } from './About';

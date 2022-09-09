@@ -132,7 +132,7 @@ function Login() {
                         {!param.admin && (
                             <>
                                 <p className="text-center mt-2">Hoặc</p>
-                                <Button variant="primary" type="submit" className={cx('register', 'w-100', 'mt-1')}>
+                                <Button variant="primary" className={cx('register', 'w-100', 'mt-1')}>
                                     <Link className="text-white" to={'/register'}>
                                         Đăng ký ngay
                                     </Link>

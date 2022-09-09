@@ -8,6 +8,7 @@ export { default as AddProduct } from './AddProduct';
 export { default as Admin } from './Admin';
 export { default as ProductManagement } from './ProductManagement';
 export { default as Login } from './Login';
+export { default as Register } from './Register';
 export { default as ReturnGoods } from './ReturnGoods';
 export { default as ReturnMoney } from './ReturnMoney';
 export { default as Insurance } from './Insurance';

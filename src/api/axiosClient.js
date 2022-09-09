@@ -21,7 +21,8 @@ axiosClient.interceptors.response.use(
         return response;
     },
     (error) => {
-        throw new Error(error) ;
+        // throw new Error(error) ;
+        console.log('loi');
     },
 );
 

@@ -11,6 +11,7 @@
         "axios": "^0.27.2",
         "bootstrap": "^5.2.0",
         "classnames": "^2.3.1",
+        "firebase": "^9.9.4",
         "framer-motion": "^6.3.16",
         "moment": "^2.29.4",
         "mongoose": "^6.5.2",
@@ -34,9 +35,7 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy":"npm run build",
-        "deploy":"gh-pages -d build"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [
@@ -60,7 +59,5 @@
         "babel-plugin-module-resolver": "^4.1.0",
         "gh-pages": "^4.0.0",
         "sass": "^1.53.0"
-    },
-    "homepage": "http://trungvi123.github.io/jemco-client"
-
+    }
 }

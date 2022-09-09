@@ -14,7 +14,8 @@ import {
     ReturnMoney,
     Insurance,
     Contact,
-    About
+    About,
+    Register
 } from '../pages';
 
 export const publicRoute = [
@@ -26,6 +27,7 @@ export const publicRoute = [
     { path: routes.search, element: <Search></Search> },
     { path: routes.login, element: <Login></Login> },
     { path: routes.adminLogin, element: <Login></Login> },
+    { path: routes.register, element: <Register></Register> },
     { path: routes.returnGoods, element: <ReturnGoods></ReturnGoods> },
     { path: routes.returnMoney, element: <ReturnMoney></ReturnMoney> },
     { path: routes.insurance, element: <Insurance></Insurance> },

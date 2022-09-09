@@ -1,0 +1,31 @@
+@use "../../scss/" as *;
+
+.form-container {
+  @include flex(center, center);
+  flex-direction: column;
+
+  .form__main {
+    @include flex(center, center);
+    flex-direction: column;
+    background-color: $main-bg;
+    width: 700px;
+    padding: 25px;
+
+    &__item {
+      width: 100%;
+      input {
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        margin: 10px 0;
+
+      }
+      p {
+          margin: unset;
+        text-align: left;
+        color: red;
+        line-height: 18px;
+      }
+    }
+  }
+}

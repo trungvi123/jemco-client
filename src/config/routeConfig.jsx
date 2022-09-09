@@ -9,6 +9,7 @@ const routes = {
     productManagement:'/admin/productManagement',
     admin:'/admin',
     login:'/login',
+    register:'/register',
     adminLogin:'/login/:admin',
     returnGoods:'/customer-care/returnGoods',
     returnMoney:'/customer-care/returnMoney',

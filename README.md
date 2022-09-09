@@ -1,5 +1,5 @@
 * Đây là 1 project nhỏ sử dụng reactjs
-* Có thể pull server bằng link 
+* Có thể pull server bằng link  https://github.com/trungvi123/jemco-server
     hoặc sử dụng fakedata có sẳn
 
 

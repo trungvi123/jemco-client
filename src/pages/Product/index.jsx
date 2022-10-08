@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import { useLocation } from 'react-router-dom';
-
 import productData from '../../assets/fake-data/products';
 import Helmet from '../../components/Helmet';
 import style from './Product.scss';

@@ -1,5 +1,5 @@
 const apiConfig = {
-    baseUrl : 'http://localhost:5000/',
+    // baseUrl : 'https://jemco-server.herokuapp.com/',
 }
 
 export default apiConfig

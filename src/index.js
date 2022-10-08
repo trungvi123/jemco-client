@@ -9,25 +9,25 @@ import ProductModalProvider from './store/ProductModalProvider';
 import CartProvider from './store/CartProvider';
 import MessageModalProvider from './store/MessageModalProvider';
 import SearchModalProvider from './store/SearchModalProvider';
-// import { Provider } from 'react-redux';
-// import { createStore,applyMiddleware } from 'redux'
-// import createSagaMiddleware from 'redux-saga'
+import { Provider } from 'react-redux';
+import { createStore,applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
 
-// import productReducer from './redux/reducers/productReducer';
-// import productSaga from './redux/sagas/productSaga';
+import productReducer from './redux/reducers/productReducer';
+import productSaga from './redux/sagas/productSaga';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-// const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware()
 
-// const store = createStore(productReducer,applyMiddleware(sagaMiddleware))
+const store = createStore(productReducer,applyMiddleware(sagaMiddleware))
 
-// sagaMiddleware.run(productSaga)
+sagaMiddleware.run(productSaga)
 
 root.render(
     // <React.StrictMode>
         <Router>
-            {/* <Provider store={store}> */}
+            <Provider store={store}>
                 <ProductModalProvider>
                     <MessageModalProvider>
                         <CartProvider>
@@ -37,7 +37,7 @@ root.render(
                         </CartProvider>
                     </MessageModalProvider>
                 </ProductModalProvider>
-            {/* </Provider> */}
+            </Provider>
         </Router>
     // </React.StrictMode>,
 );

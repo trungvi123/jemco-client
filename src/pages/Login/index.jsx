@@ -4,10 +4,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import classnames from 'classnames/bind';
 
-// import signInApi from '../../api/signInApi'; them vao khi co sever
+import signInApi from '../../api/signInApi';
 import style from './Login.scss';
 import MessageModalContext from '../../store/MessageModalContext';
-import fakeAccount from '../../assets/fake-data/fakeAccount';
 const cx = classnames.bind(style);
 
 function Login() {
@@ -20,28 +19,10 @@ function Login() {
     const handleSignIn = async () => {
         if (param.admin) {
             try {
-                let check = {
-                    state: '',
-                };
-                const admin = fakeAccount.admin;
-
-                if (admin.email === email && admin.password === password) {
-                    check = {
-                        state: 'success',
-                        user: {
-                            email:admin.email,
-                            isAdmin:true
-                        }
-                    };
-                } else {
-                    check.state = 'failure';
-                }
-                // xoa khi xài server
-
-                // const check = await signInApi.signInAdmin({
-                //     email,
-                //     password,
-                // }); git pull server để dùng, để dễ dàng ta dùng fakeAccount
+                const check = await signInApi.signInAdmin({
+                    email,
+                    password,
+                }); 
 
                 if (check.state === 'success') {
                     localStorage.setItem('user', JSON.stringify(check.user));
@@ -59,26 +40,10 @@ function Login() {
             }
         } else {
             try {
-                let check = {
-                    state: '',
-                };
-                const user = fakeAccount.user;
-                if (user.email === email && user.password === password) {
-                    check = {
-                        state: 'success',
-                        user: {
-                            email:user.email
-                        }
-                    };
-                } else {
-                    check.state = 'failure';
-                }
-                // xoa khi xài server
-
-                // const check = await signInApi.signInUser({
-                //     email,
-                //     password,
-                // });git pull server để dùng, để dễ dàng ta dùng fakeAccount
+                const check = await signInApi.signInUser({
+                    email,
+                    password,
+                });
 
                 if (check.state === 'success') {
                     localStorage.setItem('user', JSON.stringify(check.user));

@@ -1,5 +1,9 @@
 import { Row, Col, Container } from 'react-bootstrap';
 import { ab4, ab2, ab1 } from '../../assets/images/service_img';
+
+import './About.scss'
+
+
 function About() {
     return (
         <div className="main">
@@ -38,10 +42,9 @@ function About() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="m-5 text-center">
-                        <p
+                    <Col xs={5} lg={6}  className=" p-lg-5 text-center">
+                        <p className='p-lg-2'
                             style={{
-                               
                                 fontSize: '2.3rem',
                                 fontWeight: '200',
                                 position: 'relative',
@@ -50,8 +53,10 @@ function About() {
                             Chúng tôi là ai?
                         </p>
                     </Col>
-                    <Col className="m-5 text-left">
-                        <p>
+                    <Col xs={7} lg={6} className="p-lg-5 text-left">
+                        <p >
+                        
+
                             Jemco là lựa chọn hàng đầu dành cho các tín đồ thời trang Streetwear sành điệu. Sứ mệnh của
                             Jemco là trao quyền cho thế hệ trẻ toàn thế giới tự do thể hiện phong cách thông qua thời
                             trang, thương hiệu vượt qua ranh giới của thời trang streetwear bằng cách không ngừng sáng
@@ -65,8 +70,9 @@ function About() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="m-5 text-center">
+                    <Col xs={5} lg={6} className="p-lg-5 text-center">
                         <p
+                        className='p-lg-5'
                             style={{
                                 fontSize: '2.3rem',
                                 fontWeight: '200',
@@ -76,11 +82,15 @@ function About() {
                             Chất lượng trải nghiệm vượt trội
                         </p>
                     </Col>
-                    <Col className="m-5 text-left">
+                    <Col xs={7} lg={6} className=" p-lg-5 text-left">
                         <p>
                             Chúng tôi không ngừng nỗ lực, tập trung vào chất lượng sản phẩm và trải nghiệm mua sắm vượt
                             trội nhất chưa từng có trước đây, các cửa hàng vật lý của chúng tôi, tối ưu hóa trải nghiệm,
-                            giúp người dùng mua sắm một sản phẩm cao cấp thật sự. Mua sắm online dễ dàng, đa nền tảng
+                            giúp người dùng mua sắm một sản phẩm cao cấp thật sự. 
+                            
+                        </p>
+                        <p>
+                            Mua sắm online dễ dàng, đa nền tảng
                             trải nghiệm tuyệt vời. Giá thành hợp lý. Điều này đã giải quyết bài toán để bạn vừa cân đối
                             khả năng tài chính, vừa đáp ứng hoàn hảo cho nhu cầu thời trang của bạn và xu hướng nhanh
                             của thời đại.
@@ -93,10 +103,10 @@ function About() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="m-5 text-center">
+                    <Col xs={6} lg={6} className="p-lg-5 text-center">
                         <p
+                            className='p-lg-5'
                             style={{
-                                padding:'0 6rem',
                                 fontSize: '2.3rem',
                                 fontWeight: '200',
                                 position: 'relative',
@@ -105,7 +115,7 @@ function About() {
                             Biểu tượng thời trang thời đại mới Fashion icon for young generation
                         </p>
                     </Col>
-                    <Col className="m-5 text-left">
+                    <Col xs={6} lg={6} className="p-lg-5 text-left">
                         <p>
                             Tại Jemco, mỗi sản phẩm đều mang theo sự cá tính và sành điệu, đại diện cho hình ảnh giới
                             trẻ hiện đại - biểu tượng cho sự dẫn đầu phong cách thời đại mới.

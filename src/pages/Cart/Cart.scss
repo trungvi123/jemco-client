@@ -21,11 +21,16 @@
         position: sticky;
         top: calc(#{$header-shrink-height} + 20px);
 
+
+
         @include tablet {
+            position: relative;
+
             width: 100%;
-            z-index: 102;
+            z-index: 99;
             background-color: $main-bg;
-            top: calc(#{$header-shrink-height});
+        top:0;
+
         }
 
         &__txt {
@@ -80,7 +85,7 @@
                 height: 150px;
 
                 @include mobile {
-                    height: 90px
+                    height: 90px;
                 }
             }
         }

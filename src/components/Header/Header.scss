@@ -79,7 +79,7 @@
 
                     @include mobile {
                         font-size: 1rem;
-                        top: -6px;
+                        top: -1px;
                         right: -2px;
                     }
                 }
@@ -171,7 +171,7 @@
     border-radius: 5px;
     width: 150px;
     background-color: $main-bg;
-
+    z-index: 9999999999;
     
 
     &__item {

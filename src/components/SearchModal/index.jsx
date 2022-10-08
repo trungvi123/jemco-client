@@ -57,7 +57,7 @@ function SearchModal() {
                         name=""
                         spellCheck={false}
                     />
-                    <Button variant="primary" onClick={handleSearch} className="h-100">
+                    <Button variant="primary" onClick={handleSearch} >
                         Tìm kiếm
                     </Button>
                 </div>

@@ -230,7 +230,7 @@ function ProductView({ product }) {
                 ></div>
                 <div className={cx('product-desription__toggle')}>
                     <Button variant="primary" onClick={() => setDescriptionExpand(!descriptionExpand)}>
-                        {descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
+                        {!descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
                     </Button>
                 </div>
             </div>

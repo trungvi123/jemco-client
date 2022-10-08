@@ -2,12 +2,20 @@
 
 .checkouts {
     @include flex(flex-start, center);
+    @include mobile {
+        flex-direction: column;
+    }
 
     &__left {
         position: sticky;
         top: calc(#{$header-shrink-height} + 20px);
         width: 55%;
         padding: 0 5%;
+
+        @include mobile {
+            width: 100%;
+            position: relative;
+        }
 
         &__name {
             font-size: 3rem;
@@ -87,7 +95,11 @@
         flex: 1;
         padding: 0 5%;
         border-left: 1px solid $txt-second-color;
-        
+        @include mobile {
+        border-left: none;
+            position: relative;
+            margin-top: 150px
+        }
 
     }
 }

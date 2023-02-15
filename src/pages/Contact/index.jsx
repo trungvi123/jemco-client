@@ -1,7 +1,11 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
+import { useEffect } from 'react';
 import { Row, Col, Container, Button } from 'react-bootstrap';
 
 function Contact() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <div className="main">
             <Container>

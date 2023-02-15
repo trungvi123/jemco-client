@@ -107,7 +107,9 @@ function Header() {
     };
 
     return (
-        <header ref={headerRef} className={cx('header')}>
+        <header id='header' ref={headerRef} className={cx('header')}>
+              
+
             <div className={cx('container')}>
                 <SearchModal></SearchModal>
                 <div className={cx('header__menu')}>

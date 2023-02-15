@@ -24,6 +24,9 @@ function Cart() {
         cartProducts = JSON.parse(localStorage.getItem('CartItem'));
     }
 
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <Helmet title="Giỏ hàng">
             <div className={cx('main', 'container', 'cart')}>

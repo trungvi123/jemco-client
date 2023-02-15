@@ -1,12 +1,13 @@
-
 import { Route, Routes } from 'react-router-dom';
 import { Fragment } from 'react';
+
 import { publicRoute, privateRoute } from './routes';
 import { DefaultLayout } from './layout';
 import './App.scss';
 
-  function App() {
-      const user = JSON.parse(localStorage.getItem('user'))
+function App() {
+    const user = JSON.parse(localStorage.getItem('user'));
+
     return (
         <div>
             <Routes>
@@ -19,7 +20,8 @@ import './App.scss';
                     }
                     return <Route key={index} path={item.path} element={<Layout>{item.element}</Layout>}></Route>;
                 })}
-                {user && user.isAdmin && 
+                {user &&
+                    user.isAdmin &&
                     privateRoute.map((item, index) => {
                         let Layout = DefaultLayout;
                         if (item.layout) {
@@ -30,6 +32,8 @@ import './App.scss';
                         return <Route key={index} path={item.path} element={<Layout>{item.element}</Layout>}></Route>;
                     })}
             </Routes>
+
+         
         </div>
     );
 }

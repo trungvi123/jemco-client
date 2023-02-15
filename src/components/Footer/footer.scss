@@ -32,3 +32,15 @@
         }
     }
 }
+
+.goTopIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+    
+    &:hover {
+        color: $main-color;
+    }
+}

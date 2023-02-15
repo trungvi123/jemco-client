@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { ab4, ab2, ab1 } from '../../assets/images/service_img';
 
@@ -5,9 +6,12 @@ import './About.scss'
 
 
 function About() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <div className="main">
-            <Container>
+            <Container className='pt-5'>
                 <Row>
                     <Col className="text-center">
                         <h4>VỀ CHÚNG TÔI</h4>

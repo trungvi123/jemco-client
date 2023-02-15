@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 import style from './Home.scss';
 import Helmet from '../../components/Helmet';
@@ -17,6 +18,9 @@ import banner from '../../assets/images/banner.png';
 const cx = classNames.bind(style);
 
 function Home() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <Helmet title="Trang Chủ">
             <div className={cx('main', 'container')}>

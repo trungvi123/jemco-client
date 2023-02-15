@@ -8,17 +8,17 @@ import MessageModal from '../../components/MessageModal';
 function DefauLayout({ children }) {
     const MessageModalContextt = useContext(MessageModalContext)
     return (
-        <>
-            <MessageModal
-                active={MessageModalContextt.modal.show}
-                message={MessageModalContextt.modal.message}
-                type={MessageModalContextt.modal.type}
-            ></MessageModal>
+        <div>
             <Header></Header>
-            {children}
+                <MessageModal
+                    active={MessageModalContextt.modal.show}
+                    message={MessageModalContextt.modal.message}
+                    type={MessageModalContextt.modal.type}
+                ></MessageModal>
+                <ProductViewModal></ProductViewModal>
+                {children}
             <Footer></Footer>
-            <ProductViewModal></ProductViewModal>
-        </>
+        </div>
     );
 }
 

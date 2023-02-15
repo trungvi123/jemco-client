@@ -1,8 +1,12 @@
 import Helmet from '../../components/Helmet';
 import { Container } from 'react-bootstrap';
 import { csdt } from '../../assets/images/service_img';
+import { useEffect } from 'react';
 
 function ReturnGoods() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <Helmet title="Đổi trả">
             <Container>

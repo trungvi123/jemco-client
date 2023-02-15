@@ -1,16 +1,29 @@
 @use '../../scss/' as *;
 
+
+.login {
+    width: 100vw;
+}
 .form-container {
     margin-top: 10%;
     h2 {
         margin-bottom: 30px;
     }
     padding: 50px;
+    @include mobile {
+        margin-top: 20%;
+        padding: 10px;
+    }
     &__main {
         width: 550px;
         margin: auto;
         padding: 25px;
         // background-color: $third-bg;
+
+        @include mobile {
+            width: 100%;
+            padding: 5px;
+        }
     }
     .register:hover > * {
         color: $txt-white;

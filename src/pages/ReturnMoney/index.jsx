@@ -1,7 +1,11 @@
 import Helmet from '../../components/Helmet';
 import { Container } from 'react-bootstrap';
+import { useEffect } from 'react';
 
 function ReturnMoney() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <Helmet title="Hoàn tiền">
             <Container>

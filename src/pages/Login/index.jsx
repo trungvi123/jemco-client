@@ -63,7 +63,7 @@ function Login() {
     };
 
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper','login')}>
             <Container>
                 <div className={cx('form-container')}>
                     <h2 className="text-center">Welcome to Jemco Shop!</h2>

@@ -21,6 +21,9 @@ function Catalog() {
         color: [],
         size: [],
     };
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
 
     const filterRef = useRef(null);
 

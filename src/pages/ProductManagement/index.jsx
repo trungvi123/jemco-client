@@ -17,7 +17,9 @@ function ProductManagement() {
     useEffect(() => {
         dispatch(getProduct.getProductRequest());
     }, [dispatch]);
-
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
     return (
         <Helmet title="ProductManagement">
             <div className={cx('main','container')}>

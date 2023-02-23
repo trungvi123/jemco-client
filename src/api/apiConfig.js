@@ -1,5 +1,5 @@
 const apiConfig = {
-    baseUrl : 'https://jemco-server.up.railway.app/',
+    baseUrl : 'https://jemcoserver.onrender.com/',
 }
 
 export default apiConfig
